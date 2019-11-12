@@ -1,0 +1,127 @@
+<template lang="pug">
+.home
+  img.main-image(src="@|main.jpg|")
+  //- 可隐藏
+  ul.title-bar
+    li
+      a(href="#") 文案文案
+    li
+      a(href="#") 文案文案
+    li
+      a(href="#") 文案文案
+    li
+      a(href="#") 文案文案
+  .center-box
+    img.build(src="@|build.png|")
+    .w1000
+      //- 聚焦热点
+      .box
+        plug(_name="img-title-bar" _image="@|title-1.png|" _src="https://owo.ink/public/43f47f48eb127db7788b8be6fc163a4c.page")
+        .card-box.clear
+          plug(_name="card", _src="./src/module/card.owo")
+          plug(_name="card", _src="./src/module/card.owo")
+          plug(_name="card", _src="./src/module/card.owo")
+          plug(_name="card", _src="./src/module/card.owo")
+          plug(_name="card", _src="./src/module/card.owo")
+          plug(_name="card", _src="./src/module/card.owo")
+      //- 揭秘韩国
+      .box
+        plug(_name="img-title-bar" _image="@|title-2.png|" _src="https://owo.ink/public/43f47f48eb127db7788b8be6fc163a4c.page")
+        .card-box.clear
+          plug(_name="card", _src="./src/module/card.owo")
+          plug(_name="card", _src="./src/module/card.owo")
+          plug(_name="card", _src="./src/module/card.owo")
+          plug(_name="card", _src="./src/module/card.owo")
+          plug(_name="card", _src="./src/module/card.owo")
+          plug(_name="card", _src="./src/module/card.owo")
+          plug(_name="card", _src="./src/module/card.owo")
+  .center-box-2
+    .w1000
+      .box
+        plug(_name="img-title-bar" _image="@|title-3.png|" _src="https://owo.ink/public/43f47f48eb127db7788b8be6fc163a4c.page")
+        .card-box.clear
+          plug(_name="card", _src="./src/module/card.owo")
+          plug(_name="card", _src="./src/module/card.owo")
+          plug(_name="card", _src="./src/module/card.owo")
+        .bottom-bar
+          .more-button(o-hover="grow")
+            a(href="#") 加载更多
+  plug(_name="copyright" _src="https://owo.ink/public/af7930a60027587a63d8e526744f4ebc.page")
+</template>
+
+
+<style lang="less">
+.main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.title-bar {
+  height: 60px;
+  text-align: center;
+  background-color: #0172b8;
+  li {
+    display: inline-block;
+    line-height: 60px;
+    color: white;
+    padding: 0 20px;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 5px;
+    a {
+      color: white;
+    }
+  }
+  li:hover {
+    background-color: #00609d;
+  }
+  .active {
+    background-color: #00609d;
+  }
+}
+.img-title-bar {
+  z-index: 5;
+  margin: 40px 0;
+  position: relative;
+}
+.card-box {
+  margin: 0 -5px;
+}
+.card {
+  float: left;
+  margin: 8px 5px;
+}
+.mt30 {
+  padding-bottom: 30px;
+  padding-top: 60px;
+}
+.center-box {
+  position: relative;
+  background-image: linear-gradient(#ffffff 60%, #1076bc);
+}
+.build {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  z-index: 0;
+}
+.more-button {
+  display: inline-block;
+  background-color: #e1e2e4;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #565e62;
+  cursor: pointer;
+}
+.bottom-bar {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 50px;
+}
+.center-box, .center-box-2 {
+  padding-top: 40px;
+}
+</style>
